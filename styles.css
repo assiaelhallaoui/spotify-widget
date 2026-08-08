@@ -1,0 +1,86 @@
+:root {
+  --pink-light: #ffbdf6;
+  --pink-mid: #ff80ee;
+  --pink-dark: #51003a;
+  --blue-text: rgb(47, 81, 234);
+}
+
+body {
+  -webkit-app-region: drag;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(142, 158, 228);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+
+  background-image: url("background_app.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#albumArt {
+  width: 200px;
+  border-radius: 8px;
+
+  mix-blend-mode: overlay; 
+}
+
+#songTitle {
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  width: 100%;
+  color: var(--pink-dark);
+  text-align:center;
+
+}
+
+
+#songArtist {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  color: var(--pink-dark);
+  text-align:center;
+
+}
+
+#loginButton {
+  -webkit-app-region: no-drag;
+  background: #ff9ceb;
+  color: var(--pink-dark);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#loginButton:hover {
+  background: white;
+}
+
+#closeButton {
+  -webkit-app-region: no-drag;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  color: var(--pink-dark);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+#closeButton:hover {
+  background:white;
+}

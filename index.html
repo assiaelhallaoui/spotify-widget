@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Widget</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Button the user clicks to start the Spotify OAuth login flow -->
+  <button id="loginButton">login with spotify !</button>
+  <button id="closeButton">✕</button>
+  <img id="albumArt" style="display:none;" />
+  <h2 id="songTitle"></h2>
+  <p id="songArtist"></p>
+
+  <!-- renderer.js runs in this window's context (thanks to nodeIntegration:true)
+       and can use require() just like a Node.js script -->  
+  <script src="renderer.js"></script>
+</body>
+</html>
