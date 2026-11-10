@@ -1,24 +1,16 @@
 const path = require("path");
 const fs = require("fs");
 
-// On vérifie si le .env existe à côté du fichier source (cas dev / npm start).
-// C'est plus fiable que de tester process.defaultApp, qui peut varier
-// selon la version d'Electron ou comment le process est lancé.
+// on vérifie si le .env existe à côté du fichier source (cas dev / npm start).
 const devEnvPath = path.join(__dirname, ".env");
 
 // process.resourcesPath n'existe que dans une app packagée (.dmg/.exe).
-// Le "|| \"\"" évite un crash si resourcesPath est undefined en dev.
 const packagedEnvPath = path.join(process.resourcesPath || "", ".env");
 
 // Si le fichier dev existe, on l'utilise. Sinon on tombe sur le chemin packagé.
 const envPath = fs.existsSync(devEnvPath) ? devEnvPath : packagedEnvPath;
 
 require("dotenv").config({ path: envPath });
-
-// Logs temporaires pour vérifier que tout se charge bien —
-// à retirer une fois que le login fonctionne
-console.log("Chemin .env utilisé:", envPath);
-console.log("REDIRECT_URI:", process.env.REDIRECT_URI);
 
 const axios = require("axios");         // used to make http requests to spotify api
 const { shell } = require("electron");  // open the url in the user default browser
