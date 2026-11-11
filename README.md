@@ -120,6 +120,8 @@ Click **Login with Spotify**, authorize access in your browser, and return to th
 
 Start playing a song on Spotify to see its information displayed.
 
+![Login screenshot](./img/login.png)
+
 ## Screenshots
 
 Add a screenshot of the desktop widget here.
